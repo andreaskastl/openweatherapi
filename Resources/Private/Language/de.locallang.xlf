@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-05-06T00:27:44Z" product-name="openweatherapi">
+		<header/>
+		<body>
+			<trans-unit id="tx_openweatherapi_weather.name" xml:space="preserve">
+				<source>Wettervorhersage</source>
+			</trans-unit>
+			<trans-unit id="tx_openweatherapi_weather.description" xml:space="preserve">
+				<source>Anzeige der Wettervorhersage für einen ausgewählten Ort basierend auf der wetter.com openweather API.</source>
+			</trans-unit>
+			<trans-unit id="flexform.settings.title" xml:space="preserve">
+				<source>Einstellungen (basierend auf der Registrierung bei wetter.com)</source>
+			</trans-unit>
+			<trans-unit id="flexform.settings.projectName" xml:space="preserve">
+				<source>Projektname (erforderlich)</source>
+			</trans-unit>
+			<trans-unit id="flexform.settings.apiKey" xml:space="preserve">
+				<source>API Key (erforderlich)</source>
+			</trans-unit>
+			<trans-unit id="flexform.settings.cityCode" xml:space="preserve">
+				<source>City Code (erforderlich)</source>
+			</trans-unit>		
+			<trans-unit id="error.xml_not_fetched" xml:space="preserve">
+				<source>Die Wettervorhersage steht derzeit nicht zur Verfügung (Datenfehler).</source>
+			</trans-unit>
+			<trans-unit id="error.xml_data_missing" xml:space="preserve">
+				<source>Die Wettervorhersage steht derzeit nicht zur Verfügung (API Fehler). Bitte prüfen Sie die Plugin-Konfiguration.</source>
+			</trans-unit>
+			<trans-unit id="error.url" xml:space="preserve">
+				<source>Die Wettervorhersage steht derzeit nicht zur Verfügung (Verbindungsfehler). Bitte prüfen Sie die Plugin-Konfiguration.</source>
+			</trans-unit>
+			<trans-unit id="error.template_not_found" xml:space="preserve">
+				<source>Das benutzerdefinierte HTML-Template wurde nicht gefunden oder das statische TypoScript wurde der Konfiguration nicht zugeordnet.</source>
+			</trans-unit>	
+			<trans-unit id="unit.temperature" xml:space="preserve">
+				<source>°C</source>
+			</trans-unit>	
+			<trans-unit id="unit.windspeed" xml:space="preserve">
+				<source>km/h</source>
+			</trans-unit>
+			<trans-unit id="unit.precipitation" xml:space="preserve">
+				<source>%</source>
+			</trans-unit>			
+			<trans-unit id="label.wind" xml:space="preserve">
+				<source>Wind</source>
+			</trans-unit>				
+			<trans-unit id="label.winddirection" xml:space="preserve">
+				<source>aus</source>
+			</trans-unit>
+			<trans-unit id="label.precipitation" xml:space="preserve">
+				<source>Niederschlag</source>
+			</trans-unit>			
+		</body>
+	</file>
+</xliff>

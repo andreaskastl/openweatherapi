@@ -1,0 +1,15 @@
+plugin.tx_openweatherapi {
+	view {
+		templateRootPaths.0 = {$plugin.tx_openweatherapi.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_openweatherapi.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_openweatherapi.view.layoutRootPath}
+	}
+	settings {
+		apiUrl = https://api.wetter.com/forecast/weather
+		iconPath = EXT:openweatherapi/Resources/Public/Icons/
+		strftime = %A, %d.%m.%Y
+		projectName = 
+		apiKey = 
+		cityCode = 
+	}	
+}

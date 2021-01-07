@@ -1,0 +1,47 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Test LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:flexform.settings.title</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.projectName>
+						<TCEforms>
+							<label>LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:flexform.settings.projectName</label>
+							<config>
+								<type>input</type>
+								<size>32</size>
+								<max>32</max>
+								<eval>required,trim,alpha,lower</eval>
+							</config>
+						</TCEforms>
+					</settings.projectName>
+					<settings.apiKey>
+						<TCEforms>
+							<label>LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:flexform.settings.apiKey</label>
+							<config>
+								<type>input</type>
+								<size>32</size>
+								<max>32</max>
+								<eval>required,trim,alphanum,lower</eval>
+							</config>						
+						</TCEforms>
+					</settings.apiKey>
+					<settings.cityCode>
+						<TCEforms>
+							<label>LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xml:flexform.settings.cityCode</label>
+							<config>
+								<type>input</type>
+								<size>12</size>
+								<max>12</max>
+								<eval>required,trim,alphanum</eval>
+							</config>						
+						</TCEforms>
+					</settings.cityCode>						
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>
