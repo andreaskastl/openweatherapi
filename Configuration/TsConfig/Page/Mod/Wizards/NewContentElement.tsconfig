@@ -4,8 +4,8 @@ mod.wizards {
             elements {
                 openweatherapi_weather {
                     iconIdentifier = openweatherapi-weather
-						title = LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:tx_openweatherapi_weather.name
-						description = LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:tx_openweatherapi_weather.description
+                    title = LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:extension.name
+                    description = LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:extension.description
                     tt_content_defValues {
                         CType = list
                         list_type = openweatherapi_weather

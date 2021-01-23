@@ -1,10 +1,10 @@
 plugin.tx_openweatherapi {
-	view {
-		# cat=plugin.tx_openweatherapi_show/file; type=string; label=Path to template root (FE)
-		templateRootPath = EXT:openweatherapi/Resources/Private/Templates/
-		# cat=plugin.tx_openweatherapi_show/file; type=string; label=Path to template partials (FE)
-		partialRootPath = EXT:openweatherapi/Resources/Private/Partials/
-		# cat=plugin.tx_openweatherapi_show/file; type=string; label=Path to template layouts (FE)
-		layoutRootPath = EXT:openweatherapi/Resources/Private/Layouts/
-	}
+    view {
+        # cat=plugin.tx_openweatherapi_show/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:openweatherapi/Resources/Private/Templates/
+        # cat=plugin.tx_openweatherapi_show/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:openweatherapi/Resources/Private/Partials/
+        # cat=plugin.tx_openweatherapi_show/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:openweatherapi/Resources/Private/Layouts/
+    }
 }

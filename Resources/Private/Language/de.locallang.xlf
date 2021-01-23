@@ -1,56 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2016-05-06T00:27:44Z" product-name="openweatherapi">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2021-01-23T11:00:00Z" product-name="openweatherapi">
 		<header/>
 		<body>
-			<trans-unit id="tx_openweatherapi_weather.name" xml:space="preserve">
-				<source>Wettervorhersage</source>
+			<trans-unit id="extension.name">
+				<source>Weather Forecast</source>
+				<target>Wettervorhersage</target>
 			</trans-unit>
-			<trans-unit id="tx_openweatherapi_weather.description" xml:space="preserve">
-				<source>Anzeige der Wettervorhersage für einen ausgewählten Ort basierend auf der wetter.com openweather API.</source>
+			<trans-unit id="extension.description">
+				<source>Displays weather forecast for a selected location based on wetter.com openweather API.</source>
+				<target>Anzeige der Wettervorhersage für einen ausgewählten Ort basierend auf der wetter.com openweather API.</target>
 			</trans-unit>
-			<trans-unit id="flexform.settings.title" xml:space="preserve">
-				<source>Einstellungen (basierend auf der Registrierung bei wetter.com)</source>
+			<trans-unit id="flexform.settings.title">
+				<source>Properties (based on wetter.com subscription)</source>
+				<target>Einstellungen (basierend auf der Registrierung bei wetter.com)</target>
 			</trans-unit>
-			<trans-unit id="flexform.settings.projectName" xml:space="preserve">
-				<source>Projektname (erforderlich)</source>
+			<trans-unit id="flexform.settings.projectName">
+				<source>Project Name (required)</source>
+				<target>Projektname (erforderlich)</target>
 			</trans-unit>
-			<trans-unit id="flexform.settings.apiKey" xml:space="preserve">
-				<source>API Key (erforderlich)</source>
+			<trans-unit id="flexform.settings.apiKey">
+				<source>API Key (required)</source>
+				<target>API Key (erforderlich)</target>
 			</trans-unit>
-			<trans-unit id="flexform.settings.cityCode" xml:space="preserve">
-				<source>City Code (erforderlich)</source>
-			</trans-unit>		
-			<trans-unit id="error.xml_not_fetched" xml:space="preserve">
-				<source>Die Wettervorhersage steht derzeit nicht zur Verfügung (Datenfehler).</source>
+			<trans-unit id="flexform.settings.cityCode">
+				<source>City Code (required)</source>
+				<target>City Code (erforderlich)</target>
 			</trans-unit>
-			<trans-unit id="error.xml_data_missing" xml:space="preserve">
-				<source>Die Wettervorhersage steht derzeit nicht zur Verfügung (API Fehler). Bitte prüfen Sie die Plugin-Konfiguration.</source>
+			<trans-unit id="error.xmlNotFetched">
+				<source>Weather forecast is currently not available (data retrieval error).</source>
+				<target>Die Wettervorhersage steht derzeit nicht zur Verfügung (Datenfehler).</target>
 			</trans-unit>
-			<trans-unit id="error.url" xml:space="preserve">
-				<source>Die Wettervorhersage steht derzeit nicht zur Verfügung (Verbindungsfehler). Bitte prüfen Sie die Plugin-Konfiguration.</source>
+			<trans-unit id="error.xmlDataMissing">
+				<source>Weather forecast is currently not available (API error). Please check your plugin configuration.</source>
+				<target>Die Wettervorhersage steht derzeit nicht zur Verfügung (API Fehler). Bitte prüfen Sie die Plugin-Konfiguration.</target>
 			</trans-unit>
-			<trans-unit id="error.template_not_found" xml:space="preserve">
-				<source>Das benutzerdefinierte HTML-Template wurde nicht gefunden oder das statische TypoScript wurde der Konfiguration nicht zugeordnet.</source>
-			</trans-unit>	
-			<trans-unit id="unit.temperature" xml:space="preserve">
+			<trans-unit id="error.url">
+				<source>Weather forecast is currently not available (connection error). Please check your plugin configuration.</source>
+				<target>Die Wettervorhersage steht derzeit nicht zur Verfügung (Verbindungsfehler). Bitte prüfen Sie die Plugin-Konfiguration.</target>
+			</trans-unit>
+			<trans-unit id="error.templateNotFound">
+				<source>Custom HTML template not found or plugin's static TypoScript not included in site config.</source>
+				<target>Das benutzerdefinierte HTML-Template wurde nicht gefunden oder das statische TypoScript wurde der Konfiguration nicht zugeordnet.</target>
+			</trans-unit>
+			<trans-unit id="unit.temperature">
 				<source>°C</source>
-			</trans-unit>	
-			<trans-unit id="unit.windspeed" xml:space="preserve">
+				<target>°C</target>
+			</trans-unit>
+			<trans-unit id="label.interval">
+				<source>to</source>
+				<target>bis</target>
+			</trans-unit>
+			<trans-unit id="unit.windspeed">
 				<source>km/h</source>
+				<target>km/h</target>
 			</trans-unit>
-			<trans-unit id="unit.precipitation" xml:space="preserve">
+			<trans-unit id="unit.precipitation">
 				<source>%</source>
-			</trans-unit>			
-			<trans-unit id="label.wind" xml:space="preserve">
-				<source>Wind</source>
-			</trans-unit>				
-			<trans-unit id="label.winddirection" xml:space="preserve">
-				<source>aus</source>
+				<target>%</target>
 			</trans-unit>
-			<trans-unit id="label.precipitation" xml:space="preserve">
-				<source>Niederschlag</source>
-			</trans-unit>			
+			<trans-unit id="label.wind">
+				<source>Wind</source>
+				<target>Wind</target>
+			</trans-unit>
+			<trans-unit id="label.winddirection">
+				<source>from</source>
+				<target>aus</target>
+			</trans-unit>
+			<trans-unit id="label.precipitation">
+				<source>Precipitation</source>
+				<target>Niederschlag</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
