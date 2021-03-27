@@ -16,7 +16,7 @@
    },
    "extra": {
       "typo3/cms": {
-         "openweatherapi": "openweatherapi"
+         "extension-key": "openweatherapi"
       }
    }
 }
