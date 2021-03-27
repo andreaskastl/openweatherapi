@@ -4,7 +4,7 @@
    "description": "Displays weather forecast for a selected location in frontend based on wetter.com openweather API",
    "license": "GPL-2.0-or-later",
    "require": {
-      "typo3/cms-core": "^10.4 || ^11.0"
+      "typo3/cms-core": "^10.4.14 || ^11.0"
    },
    "replace": {
       "typo3-ter/openweatherapi": "self.version"
