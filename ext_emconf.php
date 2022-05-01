@@ -12,13 +12,14 @@ $EM_CONF[$_EXTKEY] = array(
     'description' => 'Displays weather forecast for a selected location in frontend based on wetter.com openweather API.',
     'category' => 'plugin',
     'author' => 'Andreas Kastl',
+    'author_email' => 'typo3@andreaskastl.de',
     'state' => 'stable',
     'clearCacheOnLoad' => true,
     'version' => '3.2.0',
     'constraints' => [
         'depends' => [
-            'php' => '7.3.0-8.0.99',        
-            'typo3' => '10.4.20-11.5.99',
+            'php' => '7.4.0-8.1.99',        
+            'typo3' => '10.4.20-11.5.99'
         ],
         'conflicts' => [],
         'suggests' => [],
