@@ -1,37 +1,20 @@
 <?php
 
-defined('TYPO3_MODE') || die('Access denied.');
+declare(strict_types=1);
 
-call_user_func(
-    function () {
-        // configure plugins
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'openweatherapi',
-            'weather',
-            [
-        \AndreasKastl\Openweatherapi\Controller\WeatherController::class => 'show'
-        ],
-        // non-cacheable actions
-        [
-        ]
-        );
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+use AndreasKastl\Openweatherapi\Controller\WeatherController;
 
-        // register wizards
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:openweatherapi/Configuration/TsConfig/Page/Mod/Wizards/NewContentElement.tsconfig">'
-        );
+defined('TYPO3') or die();
 
-        // register icons
-        $icons = [
-    'openweatherapi-weather' => 'Extension.svg',
-    ];
-        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-        foreach ($icons as $identifier => $path) {
-            $iconRegistry->registerIcon(
-                $identifier,
-                \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-                ['source' => 'EXT:openweatherapi/Resources/Public/Icons/' . $path]
-            );
-        }
-    }
+// configure plugins
+ExtensionUtility::configurePlugin(
+    'openweatherapi',
+    'weather',
+    [
+        WeatherController::class => 'show'
+    ],
+    // non-cacheable actions
+    [
+    ]
 );

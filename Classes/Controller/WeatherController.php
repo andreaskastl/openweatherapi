@@ -20,6 +20,7 @@ use TYPO3\CMS\Core\Http\RequestFactory;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+use Psr\Http\Message\ResponseInterface;
 
 /**
  * Weather Controller to fetch data from api.wetter.com and assign result to view
@@ -32,8 +33,9 @@ class WeatherController extends ActionController
      *
      * @return string The rendered HTML string
      */
-    public function showAction()
+    public function showAction(): ResponseInterface
     {
+                
         // assign settings from flexform and typoscript to view
         $this->view->assign('settings', $this->settings);
 
@@ -43,6 +45,7 @@ class WeatherController extends ActionController
         $url .= $this->settings['projectName'] . '/cs/';
         $url .= md5($this->settings['projectName'] . $this->settings['apiKey'] . $this->settings['cityCode']);
     
+
         // validate url
         if (!GeneralUtility::isValidUrl($url)) {
 
@@ -50,7 +53,7 @@ class WeatherController extends ActionController
             $this->addFlashMessage(
                 LocalizationUtility::translate('error.url', 'openweatherapi') . ' ' . $url
             );
-            return;
+            return $this->htmlResponse();
         }
 
         // get data from openweather API service
@@ -67,19 +70,21 @@ class WeatherController extends ActionController
                 $this->addFlashMessage(
                     LocalizationUtility::translate('error.xmlDataMissing', 'openweatherapi')
                 );
-                return;
+                
             } else {
 
                 // valid object - convert to array before rendering the view
                 $this->view->assign('api', (array) $xmlObject);
             }
+            
         } else {
 
             // broken request / remote file not found
             $this->addFlashMessage(
                 LocalizationUtility::translate('error.xmlNotFetched', 'openweatherapi')
-            );
-            return;
+            );            
         }
+        return $this->htmlResponse();
     }
+
 }
