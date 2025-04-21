@@ -37,54 +37,62 @@ class WeatherController extends ActionController
     {
                 
         // assign settings from flexform and typoscript to view
-        $this->view->assign('settings', $this->settings);
+        if (isset($this->settings['apiUrl']) && isset($this->settings['apiKey']) && isset($this->settings['cityCode']) && isset($this->settings['projectName'])) {
 
-        // prepare url
-        $url = $this->settings['apiUrl'] . '/city/';
-        $url .=	$this->settings['cityCode'] . '/project/';
-        $url .= $this->settings['projectName'] . '/cs/';
-        $url .= md5($this->settings['projectName'] . $this->settings['apiKey'] . $this->settings['cityCode']);
+            $this->view->assign('settings', $this->settings);
+
+            // prepare url
+            $url = $this->settings['apiUrl'] . '/city/';
+            $url .=	$this->settings['cityCode'] . '/project/';
+            $url .= $this->settings['projectName'] . '/cs/';
+            $url .= md5($this->settings['projectName'] . $this->settings['apiKey'] . $this->settings['cityCode']);
     
 
-        // validate url
-        if (!GeneralUtility::isValidUrl($url)) {
+            // validate url
+            if (!GeneralUtility::isValidUrl($url)) {
 
-            // invalid url
-            $this->addFlashMessage(
-                LocalizationUtility::translate('error.url', 'openweatherapi') . ' ' . $url
-            );
-            return $this->htmlResponse();
-        }
-
-        // get data from openweather API service
-        $response = GeneralUtility::makeInstance(RequestFactory::class)->request($url);
-
-        if ($response->getStatusCode() === 200) {
-
-            // extract xml data from response
-            $xmlObject = simplexml_load_string($response->getBody()->getContents());
-
-            if (!$xmlObject->forecast) {
-
-                // invalid xml object
+                // invalid url
                 $this->addFlashMessage(
-                    LocalizationUtility::translate('error.xmlDataMissing', 'openweatherapi')
+                    LocalizationUtility::translate('error.url', 'openweatherapi') . ' ' . $url
                 );
+                return $this->htmlResponse();
+            }
+
+            // get data from openweather API service
+            $response = GeneralUtility::makeInstance(RequestFactory::class)->request($url);
+
+            if ($response->getStatusCode() === 200) {
+
+                // extract xml data from response
+                $xmlObject = simplexml_load_string($response->getBody()->getContents());
+
+                if (!$xmlObject->forecast) {
+
+                    // invalid xml object
+                    $this->addFlashMessage(
+                        LocalizationUtility::translate('error.xmlDataMissing', 'openweatherapi')
+                    );
+                    
+                } else {
+
+                    // valid object - convert to array before rendering the view
+                    $this->view->assign('api', (array) $xmlObject);
+                }
                 
             } else {
 
-                // valid object - convert to array before rendering the view
-                $this->view->assign('api', (array) $xmlObject);
+                // broken request / remote file not found
+                $this->addFlashMessage(
+                    LocalizationUtility::translate('error.xmlNotFetched', 'openweatherapi')
+                );            
             }
-            
         } else {
 
-            // broken request / remote file not found
+            // settings or template not defined
             $this->addFlashMessage(
-                LocalizationUtility::translate('error.xmlNotFetched', 'openweatherapi')
-            );            
+                LocalizationUtility::translate('error.templateNotFound', 'openweatherapi')
+            );  
         }
         return $this->htmlResponse();
     }
-
 }
