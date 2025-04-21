@@ -4,7 +4,7 @@
 		<sDEF>
 			<ROOT>
 				<TCEforms>
-					<sheetTitle>Test LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:flexform.settings.title</sheetTitle>
+					<sheetTitle>LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:flexform.settings.title</sheetTitle>
 				</TCEforms>
 				<type>array</type>
 				<el>
