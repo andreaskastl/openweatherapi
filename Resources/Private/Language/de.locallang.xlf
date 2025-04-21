@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2021-01-23T11:00:00Z" product-name="openweatherapi">
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:openweatherapi/Resources/Private/Language/locallang.xlf" date="2025-04-21T11:00:00Z" product-name="openweatherapi">
 		<header/>
 		<body>
 			<trans-unit id="extension.name">

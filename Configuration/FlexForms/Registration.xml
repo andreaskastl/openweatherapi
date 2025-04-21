@@ -1,45 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <T3DataStructure>
 	<sheets>
 		<sDEF>
 			<ROOT>
-				<TCEforms>
-					<sheetTitle>LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:flexform.settings.title</sheetTitle>
-				</TCEforms>
+				<sheetTitle>LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:flexform.settings.title</sheetTitle>
 				<type>array</type>
 				<el>
 					<settings.projectName>
-						<TCEforms>
-							<label>LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:flexform.settings.projectName</label>
-							<config>
-								<type>input</type>
-								<size>32</size>
-								<max>32</max>
-								<eval>required,trim,alpha,lower</eval>
-							</config>
-						</TCEforms>
+						<label>LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:flexform.settings.projectName</label>
+						<config>
+							<type>input</type>
+							<size>32</size>
+							<max>32</max>
+							<eval>trim,alpha,lower</eval>
+							<required>true</required>
+						</config>
 					</settings.projectName>
 					<settings.apiKey>
-						<TCEforms>
-							<label>LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:flexform.settings.apiKey</label>
-							<config>
-								<type>input</type>
-								<size>32</size>
-								<max>32</max>
-								<eval>required,trim,alphanum,lower</eval>
-							</config>						
-						</TCEforms>
+						<label>LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xlf:flexform.settings.apiKey</label>
+						<config>
+							<type>input</type>
+							<size>32</size>
+							<max>32</max>
+							<eval>trim,alphanum,lower</eval>
+							<required>true</required>
+						</config>						
 					</settings.apiKey>
 					<settings.cityCode>
-						<TCEforms>
-							<label>LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xml:flexform.settings.cityCode</label>
-							<config>
-								<type>input</type>
-								<size>12</size>
-								<max>12</max>
-								<eval>required,trim,alphanum</eval>
-							</config>						
-						</TCEforms>
+						<label>LLL:EXT:openweatherapi/Resources/Private/Language/locallang.xml:flexform.settings.cityCode</label>
+						<config>
+							<type>input</type>
+							<size>12</size>
+							<max>12</max>
+							<eval>trim,alphanum</eval>
+							<required>true</required>
+						</config>						
 					</settings.cityCode>						
 				</el>
 			</ROOT>
