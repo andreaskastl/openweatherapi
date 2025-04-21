@@ -37,7 +37,7 @@ class WeatherController extends ActionController
     {
                 
         // assign settings from flexform and typoscript to view
-        if (isset($this->settings['apiUrl']) && isset($this->settings['apiKey']) && isset($this->settings['cityCode']) && isset($this->settings['projectName'])) {
+        if (isset($this->settings)) {
 
             $this->view->assign('settings', $this->settings);
 
